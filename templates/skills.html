@@ -1,6 +1,14 @@
 {% extends "base.html" %} {%block body%}
 <section id="skills">
-  <h1>Under construction</h1>
+  <h1 class="section-header">My Skills</h1>
+  <div class="card-container">
+    {% for skill in data %}
+    <div class="center-col">
+      <i class="{{skill.logo}} fa-6x"></i>
+      <p>{{skill.name}}</p>
+    </div>
+    {% endfor %}
+  </div>
 </section>
 
 {%endblock%}

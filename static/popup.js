@@ -16,8 +16,8 @@ const copyEmail = () => {
     console.log("Use execComand()");
   } else {
     navigator.clipboard.writeText(text).then(() => {
-      btn.textContent = "Copiado!";
-      setTimeout(() => (btn.textContent = "Copiar"), 5000);
+      btn.textContent = "Copied!";
+      setTimeout(() => (btn.textContent = "Copy"), 5000);
     });
   }
 };

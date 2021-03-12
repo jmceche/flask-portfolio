@@ -1,6 +1,26 @@
 {% extends "base.html" %} {%block body%}
 <section id="github">
-  <h1>Under construction</h1>
-</section>
+  <h1 class="section-header">My Github</h1>
+  {% if data %}
+  <div class="github-container">
+    <div class="left">
+      <img src="{{data.avatar_url}}" alt="{{data.id}}" />
+    </div>
+    <div class="right">
+      <h1>{{data.login}}</h1>
+      <h4>{{data.location}}</h4>
+      <p>{{data.bio}}</p>
+      <a href="{{data.html_url}}" target="_blank"
+        ><strong>Github</strong>: {{data.html_url}}</a
+      >
+      <a href="{{data.blog}}" target="_blank"
+        ><strong>Portfolio</strong>: {{data.blog}}</a
+      >
+    </div>
+  </div>
+  {% else %}
+  <h1>Something went wrong</h1>
 
+  {% endif %}
+</section>
 {%endblock%}

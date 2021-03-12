@@ -1,22 +1,24 @@
 {% extends "base.html" %} {%block body%}
-<h1 class="section-header">Projects</h1>
-<div class="card-container">
-  {% for proj in data %}
-  <a href="https://subtitlefinder1111.netlify.app/" target="_blank">
-    <div class="card">
-      <img class="card-img-top" src="{{proj.img }}" alt="project" />
-      <div class="card-body">
-        <h5 class="card-title"><strong>{{proj.name}}</strong></h5>
-        <p class="card-text">{{proj.desc}}</p>
-        <div class="techs">
-          <ul>
-            <li>under construction</li>
-            <li>under construction</li>
-            <li>under construction</li>
-          </ul>
+<section id="projects">
+  <h1 class="section-header">Projects</h1>
+  <div class="card-container">
+    {% for proj in data %}
+    <a href="{{ proj.url }}" target="_blank">
+      <div class="card">
+        <img class="card-img-top" src="{{ proj.img }}" alt="project" />
+        <div class="card-body">
+          <h5 class="card-title"><strong>{{proj.name}}</strong></h5>
+          <p class="card-text">{{proj.desc}}</p>
+          <div class="techs">
+            <ul>
+              <li>under construction</li>
+              <li>under construction</li>
+              <li>under construction</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </a>
-  {% endfor %} {%endblock%}
-</div>
+    </a>
+    {% endfor %} {%endblock%}
+  </div>
+</section>
